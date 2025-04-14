@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
-package poe_part1.pkg3;
+package poe.part1;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -20,19 +20,19 @@ public class LoginIT {
     public LoginIT() {
     }
     
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
     
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
     
-    @Before
+    @BeforeEach
     public void setUp() {
     }
     
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -42,14 +42,12 @@ public class LoginIT {
     @Test
     public void testCheckUsername() {
         System.out.println("checkUsername");
-        String username = "kyl_1";  
+        String username = "kk_11";
         Login instance = new Login();
         boolean expResult = false;
         boolean result = instance.checkUsername(username);
         assertEquals(expResult, result);
-}
-
-
+    }
 
     /**
      * Test of checkPasswordComplexity method, of class Login.
@@ -57,7 +55,7 @@ public class LoginIT {
     @Test
     public void testCheckPasswordComplexity() {
         System.out.println("checkPasswordComplexity");
-        String password = "ka@rve10";
+        String password = "";
         Login instance = new Login();
         boolean expResult = false;
         boolean result = instance.checkPasswordComplexity(password);
